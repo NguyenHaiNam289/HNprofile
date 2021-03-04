@@ -1,31 +1,131 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>layout</title>
-        <link rel="stylesheet" type="text/css" href="./type.css">
+        <title>My Profile</title>
+        <link rel="stylesheet" type="text/css" href="./style.css" >
+        <style>img[alt="www.000webhost.com"]{display: none;}</style>
     </head>
     <body>
-        <div class="total">
-            <header>
-                header
-            </header>
-            <nav>
-                nav
-            </nav>
-            <div class="menu">
-                <section class="menu_left">
-                    section
-                    <article>acticle</article>
-                    <article>acticle</article>
-                </section>
-                <aside class="menu_right">
-                    aside
-                </aside>
-            </div>
-
-            <footer>
-                footer
-            </footer>
+        <div class="header"><h1>My Profile</h1></div>
+        <div class="profile">
+            <div class="profile_Picture"><img src="./hinh1.jpg"></div>
+            <div class="profile_info">
+                <p> Nguyễn Hải Nam</p>
+                <p>web developer</p>
+                <button type="button" class="show_profile" id="show" onclick="showprofile()">Profile</div>
+             </div>
         </div>
+        <div class="link_profile" id="link" style="display:block;">
+            <h2>Thông tin Liên Hệ</h2>
+            <ul>
+                <li>
+                    <a href="tel:0333007630">
+                        <div class="tt">
+                            
+                            <div class="left"><img src="./logoF.png"></div>
+                            <div class="right"><h3>tel (nhấn để gọi)</h3></div>
+                        </div>
+                    </a>
+                    
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/profile.php?id=100013449643875">
+                        <div class="tt">
+                            <div class="left"><img src="./LogoFacebook.png"></div>
+                            <div class="right"> <h3>facebook</h3></div>
+                        </div>
+                        
+                    </a>
+                    
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/nhn_ng.h.nam/">
+                        <div class="tt">
+                            
+                            <div class="left"><img src="./logoinsta.png"></div>
+                            <div class="right"><h3>instagram</h3> </div>
+                        </div>
+                    </a>
+                    
+                </li>
+                <li>
+                    <a href="https://zalo.me/0333007630">
+                        <div class="tt">
+                            
+                            <div class="left"><img src="./logo zalo.png"></div>
+                            <div class="right"><h3>zalo</h3> </div>
+                        </div>
+                    </a>
+                    
+                </li>
+                <li>
+                    <a href="mailto: namn814444@gmail.com">
+                        <div class="tt">
+                            
+                            <div class="left"><img src="./logo_email2.jpg"></div>
+                            <div class="right"><h3>email</h3> </div>
+                        </div>
+                    </a>
+                    
+                </li>
+                <li>
+                    <a href="https://www.tiktok.com/@258368128d?lang=vi-VN">
+                        <div class="tt">
+                            
+                            <div class="left"><img src="./logoTiktok.png"></div>
+                            <div class="right"><h3>Tiktok</h3> </div>
+                        </div>
+                    </a>
+                    
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/channel/UCbPyXDO7fORHU_2ifTjIg3g">
+                        <div class="tt">
+                            
+                            <div class="left"><img src="./logoyoutube.jpg"></div>
+                            <div class="right"><h3>Youtube</h3> </div>
+                        </div>
+                    </a>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="my_profile" id="profile" style="display:none;">
+            <h2>Thông tin cá nhân</h2>
+            <div class="left">
+                <p>Date of birth</p>
+                <p>Gender</p>
+                <p>Address</p>
+                <p>Education</p>
+            </div>
+            <div class="right">
+                <p>28 / 09 / 2001</p>
+                <p>Male</p>
+                <p>HCM, Vietnam</p>
+                <p>Industrial University of HoChiMinh city</p>
+                <p>Major: Software engineer</p>
+                <p>GPA: 3.6/4.0</p>
+                <p>RMIT University Vietnam</p>
+                <p>Major: Bachelor of Business</p>
+                <p>GPA: 3.3/4.0</p>
+            </div>
+        </div>
+
+
+        <script>
+            function showprofile(){
+                if(document.getElementById("link").style.display == "block"){
+                    document.getElementById("link").style.display = "none";
+                    document.getElementById("show").innerHTML = "Info";
+                    document.getElementById("profile").style.display = "block";
+                }
+                else{
+                    document.getElementById("link").style.display = "block"
+                    document.getElementById("show").innerHTML = "Profile";
+                    document.getElementById("profile").style.display = "none";
+                }
+                
+            }
+        </script>
     </body>
 </html>
